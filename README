@@ -1,0 +1,52 @@
+### Compiling ###
+
+In order to compile the hog3d feature extraction tool you need to have the following libraries installed on your system:
+* OpenCV library (tested with version 2)
+* ffmpeg library
+* boost libraries
+
+If these libraries are installed, simply type 'make' to compile the tool. The executable will be in the directory './release/'.
+
+
+### run a test ###
+
+To check whether the tool is working properly, run the following command:
+
+./release/extractFeatures -p test_sequences/walk-simple.pos test_sequences/walk-simple.avi > out.features
+
+Congratulations, you have computed your first HOG3D features :) ! You want to compare your file out.features with the file that I have computed myself to verify that everything is working correctly. To do so, type:
+
+vimdiff out.features test_sequences/hollywood2.features
+
+Note that I experienced differences in the exact feature information for different versions of ffmpeg library. Try to use a recent snapshot.
+
+
+### Bugs and extensions ###
+
+Various questions have already been posed .. I put up a FAQ on my website. If you experience problems or have questions, please check whether the FAQ will give you an answer:
+
+http://lear.inrialpes.fr/people/klaeser
+
+If you find bugs, etc., feel free to drop me a line. Also if you developed some extension to the program, let me know and I can include it in the tool. You can find my contact data on my webpage, as well.
+
+
+### LICENSE CONDITIONS ###
+
+The Image Annotation Tool for image annotations with pixelwise masks
+
+Copyright (C) 2007 Alexander Klaeser
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
