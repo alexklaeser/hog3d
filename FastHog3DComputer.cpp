@@ -127,7 +127,7 @@ void FastHog3DComputer::initWeights()
 				for (std::size_t iXPix = 0; iXPix < _nPixelsPerDim; ++iXPix)
 					for (std::size_t iYPix = 0; iYPix < _nPixelsPerDim; ++iYPix)
 						for (std::size_t iTPix = 0; iTPix < _nPixelsPerDim; ++iTPix, ++iPix) {
-							assert(iPix < _gaussWeighting.size());
+							assert(iPix < _weights.size());
 							double distX = meanXY - (iX * _nPixelsPerDim + iXPix);
 							double distY = meanXY - (iY * _nPixelsPerDim + iYPix);
 							double distT = meanT - (iT * _nPixelsPerDim + iTPix);
