@@ -1,4 +1,5 @@
-CCACHE = "ccache g++"
+# CCACHE = "ccache g++"
+CCACHE = "g++"
 
 all:
 	@rm -rf release; \
